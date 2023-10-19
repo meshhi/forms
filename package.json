@@ -14,6 +14,10 @@
     "preshow:dist": "npm run build",
     "show:dist": "live-server dist"
   },
+  "jest": {
+    "verbose": true,
+    "preset": "jest-puppeteer"
+  },
   "author": "coursar",
   "license": "MIT",
   "devDependencies": {
@@ -37,5 +41,10 @@
     "webpack-cli": "^4.10.0",
     "webpack-dev-server": "^4.11.1",
     "webpack-merge": "^5.8.0"
+  },
+  "dependencies": {
+    "jest-dev-server": "^9.0.1",
+    "jest-puppeteer": "^9.0.1",
+    "puppeteer": "^21.3.8"
   }
 }
