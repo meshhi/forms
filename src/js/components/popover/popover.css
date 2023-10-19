@@ -1,0 +1,30 @@
+.popover {
+    max-width: 276px;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: .3rem;
+    position: absolute;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.popover-title {
+    flex: 1;
+    padding: .5rem .75rem;
+    margin-bottom: 0;
+    font-size: 1rem;
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #ebebeb;
+    border-top-left-radius: calc(.3rem - 1px);
+    border-top-right-radius: calc(.3rem - 1px);
+}
+
+.popover-text {
+    flex: 3;
+    padding: .5rem .75rem;
+    color: #212529;
+}
+
+.show {
+    opacity: 1;
+}

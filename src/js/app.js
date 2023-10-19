@@ -1,11 +1,9 @@
-// TODO: write code here
+import Widget from "./components/widget/Widget";
+import popover from "./components/popover/Popover";
 
-// comment this to pass build
-const unusedVariable = "variable";
-
-// for demonstration purpose only
-export default function demo(value) {
-  return `Demo: ${value}`;
+const start = () => {
+  const widget = new Widget();
+  widget.bindToDOM(document.body);
 }
 
-console.log("app.js included");
+start();

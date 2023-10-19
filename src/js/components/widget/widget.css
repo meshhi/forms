@@ -1,0 +1,14 @@
+.widget {
+    background-color: rgba(255, 47, 47, 0.829);
+    width: 400px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 1.5rem;
+    border-radius: 15px;
+    justify-self: center;
+    align-self: center;
+    cursor: pointer;
+}
