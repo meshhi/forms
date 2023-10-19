@@ -5,7 +5,7 @@ describe("Test popover", () => {
   let page;
 
   beforeAll(async () => {
-    browser = await puppeteer.launch({ headless: false });
+    browser = await puppeteer.launch({ headless: true });
   });
 
   afterEach(async () => {
@@ -19,18 +19,20 @@ describe("Test popover", () => {
   describe("add task to the list", () => {
     beforeEach(async () => {
       page = await browser.newPage();
-      await page.goto(URL, {waitUntil: 'domcontentloaded'});
+      await page.goto(URL, { waitUntil: "domcontentloaded" });
     });
 
     it('should be titled "Document"', async () => {
       await expect(page.title()).resolves.toMatch("Document");
     });
 
-    it('popover should be visible by clicking widget', async () => {
-      await page.locator('.widget').click();
-      const popover = await page.$('.popover')
-      const className = await (await popover.getProperty('className')).jsonValue()
-      expect(className).toBe('popover show')
+    it("popover should be visible by clicking widget", async () => {
+      await page.locator(".widget").click();
+      const popover = await page.$(".popover");
+      const className = await (
+        await popover.getProperty("className")
+      ).jsonValue();
+      expect(className).toBe("popover show");
     });
   });
 });
