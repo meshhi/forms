@@ -19,7 +19,8 @@ describe("Test popover", () => {
   describe("add task to the list", () => {
     beforeEach(async () => {
       page = await browser.newPage();
-      await page.goto("http://localhost:8080/");
+      console.log(URL)
+      await page.goto(URL, {waitUntil: 'domcontentloaded'});
     });
 
     it('should be titled "Document"', async () => {
