@@ -4,8 +4,8 @@ module.exports = {
       port: 8080,
     },
     launch: {
-      headless: false,
-      devtools: true,
+      headless: true,
+      devtools: false,
       timeout: 30000
     }
   }
